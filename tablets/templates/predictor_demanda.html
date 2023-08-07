@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Predictor de Demanda</h1>
+    <div class="button-container">
+        <!-- Utilizamos las clases de Bootstrap para estilizar los botones -->
+        <a href="{% url 'notebooks' %}" class="btn btn-success button">Notebooks</a>
+        <a href="{% url 'tablets' %}" class="btn btn-success button">Tablets</a>
+        <a href="{% url 'pcs' %}" class="btn btn-success button">PCs</a>
+        <a href="{% url 'impresoras' %}" class="btn btn-success button">Impresoras</a>
+    </div>
+</div>
+{% endblock %}

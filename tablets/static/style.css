@@ -1,0 +1,32 @@
+body {
+    /* Utilizamos el gradiente lineal de CSS */
+    background: linear-gradient(to bottom right, #00bfff, #87ceeb);
+    text-align: center;
+}
+
+h1 {
+    color: rgb(158, 5, 158);
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.button {
+    padding: 40px 80px;
+    font-size: 40px;
+    border-radius: 8px;
+}

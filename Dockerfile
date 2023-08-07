@@ -1,23 +1,23 @@
-FROM python:3.12.0b3-bullseye
+# Usar la imagen base de Python 3.9.17 en Debian Bullseye
+FROM python:3.9.17-bullseye
 
-RUN apk update \
-    && apk add --no-cache mariadb-connector-c-dev \
-                        build-base \
-                        linux-headers \
-                        mariadb-dev \
-                        gcc \
-                        musl-dev \
-                        python3-dev \
-                        pkgconfig
+# Establecer el directorio de trabajo en /app
+WORKDIR /app
 
-WORKDIR /code
+# Copiar el contenido de los directorios del proyecto a /app en el contenedor
+COPY . /app
 
-COPY requirements.txt .
-
+# Instalar las dependencias del proyecto desde requirements.txt
+COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+# Instalar el cliente de PostgreSQL
+RUN apt-get update && \
+    apt-get install -y libpq-dev && \
+    rm -rf /var/lib/apt/lists/*
 
-EXPOSE 8000
+# Exponer el puerto en el que Django está configurado para escuchar (si es necesario)
+EXPOSE 1438
 
-CMD ["python", "manage.py", "runserver"]
+# Comando para ejecutar la aplicación Django (ajústalo según tus necesidades)
+CMD ["python", "manage.py", "runserver", "0.0.0.0:1438"]

@@ -1,24 +1,24 @@
 version: '3'
 
 services:
-  web:
+  db:
+    image: postgres:14.8
+    environment:
+      POSTGRES_PASSWORD: cristopher2023
+    ports:
+      - "5432:5432"
+
+  django:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
-    volumes:
-      - .:/code
-      - mysql-data:/var/lib/mysql
-
-  db:
-    image: mysql:8.0
-    ports: 
-      - "3306:3306"
+      - "1438:1438"
+    depends_on:
+      - db
     environment:
-      - MYSQL_DATABASE=cristopherq_bd
-      - MYSQL_USER=cquintana
-      - MYSQL_PASSWORD=cristopher2023
-      - MYSQL_ROOT_PASSWORD=quintana2023adm
-volumes:
-  mysql-data:
+      - DB_NAME=predictor
+      - DB_USER=cristopher
+      - DB_PASSWORD=cristopher2023
+      - DB_HOST=db
+      - DB_PORT=5432
