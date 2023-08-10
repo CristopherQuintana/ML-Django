@@ -29,7 +29,7 @@ DEBUG = False
 
 print(BASE_DIR)
 
-ALLOWED_HOSTS = ["0.0.0.0", "localhost"]  # Configura la dirección IP del host
+ALLOWED_HOSTS = ["0.0.0.0", "localhost", "146.83.198.35"]  # Configura la dirección IP del host
 
 STATIC_URL = '/static/'
 # Application definition
