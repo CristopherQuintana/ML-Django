@@ -55,7 +55,8 @@ Una vez construida la imagen, lanzar un contenedor montando un volumen que conte
 
 ##### Ejecutar código
 
-`python manage.py runserver 146.83.198.35:1438`
+`python manage.py runserver 0.0.0.0:1438`
+
 ## Construido con
 
 Django

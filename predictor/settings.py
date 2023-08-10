@@ -27,8 +27,6 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-print(BASE_DIR)
-
 ALLOWED_HOSTS = ["0.0.0.0", "localhost", "146.83.198.35"]  # Configura la dirección IP del host
 
 STATIC_URL = '/static/'
