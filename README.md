@@ -24,13 +24,21 @@ Una vez construida la imagen, lanzar un contenedor montando un volumen que conte
 
 `git clone git@github.com:CristopherQuintana/ML-Django.git`
 
+##### Instalar Python, pip y virtualenv
+
+`sudo apt install python3.9`
+
+`sudo apt install python3-pip`
+
+`sudo apt install virtualenv`
+
 ##### Entrar a carpeta de proyecto
 
 `cd ML-Django`
 
 ##### Instalar entorno virtual
 
-`virutalenv venv`
+`virtualenv venv`
 
 ##### Ingresar a entorno virtual
 
@@ -43,6 +51,7 @@ Una vez construida la imagen, lanzar un contenedor montando un volumen que conte
 ##### Ingresar a carpeta predictor, crear archivo .env
 
 `cd predictor`
+
 `nano .env`
 
 ##### Editar archivo .env con la siguiente línea de texto
