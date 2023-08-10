@@ -22,7 +22,7 @@ Una vez construida la imagen, lanzar un contenedor montando un volumen que conte
 
 #### Clonar el código de GitHub usando el siguiente comando
 
-`git clone https://CristopherQuintana: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@github.com/CristopherQuintana/ML-Django.git`
+`git clone git@github.com:CristopherQuintana/ML-Django.git`
 
 ##### Entrar a carpeta de proyecto
 
